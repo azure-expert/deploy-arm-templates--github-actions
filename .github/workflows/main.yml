@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 name: Run Azure Login with OpenID Connect
-=======
-#testa
->>>>>>> b29624742ce563b33bf1291557e316cec4238709
 on: [push]
 
 permissions: write-all
@@ -16,8 +12,8 @@ jobs:
       uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
 
-        # Deploy ARM template
     - name: Run ARM deploy
       uses: azure/arm-deploy@v1
       with:
@@ -27,8 +23,4 @@ jobs:
         parameters: storageAccountType=Standard_LRS
 
         # output containerName variable from template
-<<<<<<< HEAD
     - run: echo ${{ steps.deploy.outputs.containerName }}
-=======
-      - run: echo ${{ steps.deploy.outputs.containerName }}
->>>>>>> b29624742ce563b33bf1291557e316cec4238709
