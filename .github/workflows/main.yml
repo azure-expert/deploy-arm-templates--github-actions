@@ -1,4 +1,4 @@
-#teste
+#teste1
 name: Run Azure Login with OpenID Connect
 on: [push]
 
